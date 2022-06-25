@@ -1,0 +1,115 @@
+/* Asignando al div de fondo una imagen con efecto blur */
+.fondo {
+    background-image: url('../img/formula.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: blur(3px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+
+/* Cotenido del contenedor principal definido para la realización de este código. */
+.contenedor{
+    margin: auto;
+    max-width: max-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+  font-family: 'fantasy';
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  font-size: 80px;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+}
+h2{
+    position: absolute;
+    font-family: 'fantasy';
+    color: rgb(255, 255, 255);
+    left: 190px;
+    font-size: 28px;
+    z-index: -1;
+}
+
+/* Resultados finales en pista */
+h3{
+    position: absolute;
+    font-family: 'fantasy';
+    color: rgb(255, 255, 255);
+    left: 375px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    z-index: -1;
+    /* parpadeo de los resultados */
+    animation: blinker 1s linear infinite;
+}
+
+/* Etiqueta de input de cantidad de coches */
+label{
+  font-family: 'fantasy';
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Estilo de los botones iniciar y reiniciar */
+button{
+  margin-top: 10px;
+  font-family: 'fantasy';
+  color: black;
+  letter-spacing: 1px;
+  padding: 10px 30px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+/* Input cantidad de coches */
+input{
+  font-family: 'fantasy';
+  color: black;
+  padding: 0px 25px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 25px;
+}
+
+/* Contenedor de coches */
+#cars{
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Esto es necesario para ubicar los coches justo encima de la imagen */
+.carretera{
+    display: block;
+    position: absolute;
+    z-index: -5;
+  }
+
+/* Rotado de imagen de coche */
+.mirror {
+    transform: scale(-1, 1);
+ }
+
+ /* Medallas por posición */
+.puesto1::after{
+    content: url(../img/oro.png);
+}
+.puesto2::after{
+  content: url(../img/plata.png);
+}
+.puesto3::after{
+  content: url(../img/bronce.png);
+}
+}
